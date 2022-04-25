@@ -3,6 +3,7 @@
 // so that you can retrive it on checkout.html page
 let sum=JSON.parse(localStorage.getItem("amount"))||0
 document.querySelector("#wallet").innerText=sum
+
 function display()
 {
     document.querySelector("#wallet").innerText=sum 
@@ -22,6 +23,9 @@ async function main()
     const response=await search()
     if(response==undefined){
         console.log("undefined")
+        document.querySelector("#movies").innerText=null
+        document.querySelector("#movies").innerText="No such movie"
+
     }
     else{
         console.log(response)
@@ -39,7 +43,7 @@ function append(data)
         p=document.createElement("p")
         p.innerText=el.Title
         btn=document.createElement("button")
-        btn.innerText="Book Now"
+        btn.innerText="book now"
         btn.setAttribute("class","book_now")
         btn.addEventListener("click",function(){
             book(el)
