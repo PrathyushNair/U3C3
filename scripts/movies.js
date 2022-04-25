@@ -1,14 +1,16 @@
 // Implement debouncing for network request
 // On clicking book now store the selected movie in localstorage as key "movie"
 // so that you can retrive it on checkout.html page
+
 let sum=JSON.parse(localStorage.getItem("amount"))||0
-document.querySelector("#wallet").innerText=sum
+//document.querySelector("#wallet").innerText=sum
 
 function display()
 {
-    document.querySelector("#wallet").innerText=sum 
+    return(sum )
+    
 }
-display()
+document.querySelector("#wallet").innerText=display()
 async function search()
 {
      let input=document.querySelector("#search").value 

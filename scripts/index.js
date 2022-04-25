@@ -1,11 +1,12 @@
 // Store the wallet amount to your local storage with key "amount"
 let sum=JSON.parse(localStorage.getItem("amount"))||0
-document.querySelector("#wallet").innerText=sum
+//document.querySelector("#wallet").innerText=sum
 function display()
 {
-    document.querySelector("#wallet").innerText=sum 
+    return(sum )
+    
 }
-display()
+document.querySelector("#wallet").innerText=display()
 function addmoney()
 {   let sum=JSON.parse(localStorage.getItem("amount"))||0
     amount=document.querySelector("#amount").value

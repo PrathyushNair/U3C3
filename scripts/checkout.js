@@ -11,13 +11,13 @@ console.log(moviedetails)
 
     document.querySelector("#movie").innerText=null
     
-        div=document.createElement("div")
+       
         title=document.createElement("h2")
         image=document.createElement("img")
         image.src=moviedetails.Poster
         title.innerText=moviedetails.Title
-        div.append(title,image)
-        document.querySelector("#movie").append(div)
+        
+        document.querySelector("#movie").append(image,title)
    function booking()
    {
        avlamt=JSON.parse(localStorage.getItem("amount"))||0
