@@ -17,7 +17,7 @@ console.log(moviedetails)
         image.src=moviedetails.Poster
         title.innerText=moviedetails.Title
         
-        document.querySelector("#movie").append(image,title)
+        document.querySelector("#movie").append(title,image)
    function booking()
    {
        avlamt=JSON.parse(localStorage.getItem("amount"))||0
